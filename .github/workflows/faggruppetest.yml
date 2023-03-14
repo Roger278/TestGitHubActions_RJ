@@ -44,7 +44,7 @@ jobs:
         uses: actions/upload-artifact@v3.1.2
         with:
           name: test
-          path: ./TestGithubActions/TestGithubActions/bin/debug/netcoreapp3.1/
+          path: ./TestGithubActions/TestGithubActions/bin/Debug/netcoreapp3.1/
         
       # Runs a single command using the runners shell
       - name: Test
