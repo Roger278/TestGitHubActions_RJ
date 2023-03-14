@@ -40,6 +40,13 @@ jobs:
         run: dotnet build
         
       # Runs a single command using the runners shell
+      - name: Upload
+        uses: actions/upload-artifact@3.1.2
+        with:
+          name: test
+          path: ./TestGithubActions/TestGithubActions/bin/debug/netcoreapp3.1/
+        
+      # Runs a single command using the runners shell
       - name: Test
         working-directory: TestGithubActions
         run: dotnet test        
@@ -55,10 +62,10 @@ jobs:
 
     steps:
       # Runs a single command using the runners shell
-      - name: Upload
-        uses: actions/upload-artifact@3.1.2
+      - name: Download
+        uses: actions/download-artifact@2.1.1
         with:
           name: test
-          path: ./TestGithubActions/TestGithubActions/bin/debug/netcoreapp3.1/
+          path: ./program
 
     
