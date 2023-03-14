@@ -68,6 +68,9 @@ jobs:
         with:
           name: test
           path: ./program
+          
+      - name: ls
+        run: ls -R
 
       - name: Kjør
         run: dotnet ./program/TestGithubActions.dll
