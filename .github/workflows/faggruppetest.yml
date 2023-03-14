@@ -59,6 +59,7 @@ jobs:
 
   runprogram:
     runs-on: ubuntu-latest
+    needs: build
 
     steps:
       # Runs a single command using the runners shell
